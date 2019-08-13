@@ -14,7 +14,8 @@ class DoctorSerializer(serializers.ModelSerializer):
         fields = ('id', 'name', 'contact', 'address', 'location')
 
 class LocationSerializer(serializers.ModelSerializer):
-    songs = LocationSerializer(many=True, read_only=True)
+    doctors = DoctorSerializer(many=True, read_only=True)
+    pharmacies = PharmacySerializer(many=True, read_only=True)
     class Meta:
         model = Location
-        fields = ('id', 'photo_url')
+        fields = ('id', 'photo_url', 'doctors', 'pharmacies')
