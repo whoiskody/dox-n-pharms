@@ -1,28 +1,25 @@
 import React, {Component} from "react";
 import {BrowserRouter as Router, Route, Switch, Link} from "react-router-dom";
 import Location from "./components/Location";
-import Home from "./components/Home";
+import LocationList from "./components/LocationList";
 import "./App.css";
 
 class App extends Component {
     render() {
         return (
-            <Router>
-                <div className="App">
-
-                    <div>
-                        <h1>Dox-N-Pharms</h1>
-                        <div>
-                            <div><Link to="/">All Locations</Link></div>
-                        </div>
-                    </div>
+          <div className="App">
+              <Router>
+                  <nav>
+                    <h1>Dox-N-Pharms</h1>
+                    <Link to="/">Home</Link>
+                  </nav>
 
                     <Switch>
-                      <Route exact path="/" component={Home}/>
+                      <Route exact path="/" component={LocationList}/>
                       <Route path="/location/:id" component={Location}/>
                     </Switch>
-                </div>
-            </Router>
+              </Router>
+          </div>
         );
     }
 }
