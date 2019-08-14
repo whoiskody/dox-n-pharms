@@ -11,7 +11,7 @@ class App extends Component {
                 <div className="App">
 
                     <div>
-                        <h1>Tunr</h1>
+                        <h1>Dox-N-Pharms</h1>
                         <div>
                             <div><Link to="/">All Locations</Link></div>
                         </div>
@@ -28,3 +28,4 @@ class App extends Component {
 }
 
 export default App;
+
