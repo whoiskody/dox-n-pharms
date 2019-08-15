@@ -4,7 +4,7 @@ import LocationList from "./components/LocationList";
 import Location from "./components/Location";
 import Doctor from "./components/Doctor";
 import Pharmacy from "./components/Pharmacy";
-import NewLocationForm from "./components/NewLocationForm";
+import NewLocationsForm from "./components/NewLocationsForm";
 import "./App.css";
 
 
@@ -21,7 +21,7 @@ class App extends Component {
                     <Switch>
                       <Route exact path="/" component={LocationList}/>
                       <Route path="/locations/:id" component={Location}/>
-                      <Route path="/locations/new" component={NewLocationForm}/>
+                      <Route path="/new" component={NewLocationsForm}/>
                       <Route path="/doctor/:id" component={Doctor}/>
                       <Route path="/pharmacy/:id" component={Pharmacy}/>
                     </Switch>
