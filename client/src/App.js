@@ -1,10 +1,12 @@
 import React, {Component} from "react";
 import {BrowserRouter as Router, Route, Switch, Link} from "react-router-dom";
-import Location from "./components/Location";
 import LocationList from "./components/LocationList";
+import Location from "./components/Location";
 import Doctor from "./components/Doctor";
 import Pharmacy from "./components/Pharmacy";
+import NewLocationForm from "./components/NewLocationForm";
 import "./App.css";
+
 
 class App extends Component {
     render() {
@@ -19,6 +21,7 @@ class App extends Component {
                     <Switch>
                       <Route exact path="/" component={LocationList}/>
                       <Route path="/locations/:id" component={Location}/>
+                      <Route path="/locations/new" component={NewLocationForm}/>
                       <Route path="/doctor/:id" component={Doctor}/>
                       <Route path="/pharmacy/:id" component={Pharmacy}/>
                     </Switch>
