@@ -15,3 +15,5 @@ class DoctorView(viewsets.ModelViewSet):
 class PharmacyView(viewsets.ModelViewSet):
     queryset = Pharmacy.objects.all()
     serializer_class = PharmacySerializer
+
+
