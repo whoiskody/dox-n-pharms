@@ -2,10 +2,10 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
-export default class Home extends Component {
+export default class LocationList extends Component {
 
     state = {
-        location: []
+        locations: []
     }
 
     componentDidMount(){
@@ -13,7 +13,7 @@ export default class Home extends Component {
     }
     
     getAllLocations = () => {
-        axios.get('/api/v1/location/')
+        axios.get('/api/v1/locations/')
             .then(res => {
                 this.setState({
                     locations: res.data
@@ -25,9 +25,9 @@ export default class Home extends Component {
       }
 
     render() {
-        let locationList = this.state.location.map((location) => {
+        let locationList = this.state.locations.map((location) => {
             return (
-                <Link to={`/location/${location.id}`}>
+                <Link to={`/locations/${location.id}`}>
                 <div>
                     <h2>{location.name}</h2>
                     <img src={location.photo_url} alt=''/>

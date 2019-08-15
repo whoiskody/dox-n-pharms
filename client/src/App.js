@@ -2,13 +2,15 @@ import React, {Component} from "react";
 import {BrowserRouter as Router, Route, Switch, Link} from "react-router-dom";
 import Location from "./components/Location";
 import LocationList from "./components/LocationList";
+import Doctor from "./components/Doctor";
+import Pharmacy from "./components/Pharmacy";
 import "./App.css";
 
 class App extends Component {
     render() {
         return (
-          <div className="App">
               <Router>
+          <div className="App">
                   <nav>
                     <h1>Dox-N-Pharms</h1>
                     <Link to="/">Home</Link>
@@ -16,10 +18,12 @@ class App extends Component {
 
                     <Switch>
                       <Route exact path="/" component={LocationList}/>
-                      <Route path="/location/:id" component={Location}/>
+                      <Route path="/locations/:id" component={Location}/>
+                      <Route path="/doctor/:id" component={Doctor}/>
+                      <Route path="/pharmacy/:id" component={Pharmacy}/>
                     </Switch>
-              </Router>
           </div>
+              </Router>
         );
     }
 }

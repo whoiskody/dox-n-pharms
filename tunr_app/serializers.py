@@ -18,4 +18,4 @@ class LocationSerializer(serializers.ModelSerializer):
     pharmacies = PharmacySerializer(many=True, read_only=True)
     class Meta:
         model = Location
-        fields = ('id', 'photo_url', 'doctors', 'pharmacies')
+        fields = ('id', 'name', 'photo_url', 'doctors', 'pharmacies')
