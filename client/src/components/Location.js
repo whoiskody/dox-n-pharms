@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import { Redirect } from 'react-router-dom';
 
 export default class Location extends Component {
     state = {
@@ -44,7 +45,7 @@ export default class Location extends Component {
     handleSubmit = (event) => {
         event.preventDefault()
 
-        axios.put(`/api/v1/locations/${this.state.location.id}`)
+        axios.put(`/api/v1/locations/${this.state.location.id}/`, this.state.location)
             .then((res) => {
                 this.setState({
                     location: res.data,
@@ -53,9 +54,20 @@ export default class Location extends Component {
             })
     }
 
+    handleDeleteLocation = () => {
+        axios.delete(`/api/v1/locations/${this.state.location.id}/`)
+        .then(() => {
+            this.setState({redirectToHome: true})
+        })
+    }
+
     
 
     render() {
+        if(this.state.redirectToHome) {
+            return <Redirect to="/" />
+        }
+
         let doctorList = this.state.location.doctors.map((doctor) => {
             return (
                 <div key={doctor.id}>
@@ -89,12 +101,21 @@ export default class Location extends Component {
                     <div className= "locationName" >
                         <label htmlFor="location-name">City</label>
                     <input 
-                        type="text" 
-                        id="location-name" 
-                        name="name" 
-                        onChange={this.handleInputChange}
-                        value={this.state.location.name}
-                    />
+                            type='text' 
+                            name='name' 
+                            id='location-name'
+                            onChange={this.handleInputChange}
+                            value={this.state.location.name}
+                        />
+
+                        <label htmlFor='location-photo_url'>Photo URL</label>
+                        <input 
+                            type='text' 
+                            name='photo_url' 
+                            id='location-photo'
+                            onChange={this.handleInputChange}
+                            value={this.state.location.photo_url}
+                        />
                     </div>
                     <div className= "updateLocation" >
                        <input type="submit" value="Update Location"/> 
@@ -102,6 +123,7 @@ export default class Location extends Component {
                     </form>
             :<div>
                  <button onClick={this.handleToggleEditForm}>Edit Shop</button>
+                 <button onClick={this.handleDeleteLocation}>Delete Shop</button>
                  </div>
             }
                 <h1>{this.state.location.name}</h1>
