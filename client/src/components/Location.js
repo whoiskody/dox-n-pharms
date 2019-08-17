@@ -71,7 +71,7 @@ export default class Location extends Component {
         let doctorList = this.state.location.doctors.map((doctor) => {
             return (
                 <div key={doctor.id}>
-                    <Link to={`/doctor/${doctor.id}`}>
+                    <Link to={`/doctors/${doctor.id}`}>
                         <div key={doctor.id}>
                         <p>{doctor.name}</p>
                         <img height="200" width="200" src={doctor.photo_url} alt=''/>
@@ -84,7 +84,7 @@ export default class Location extends Component {
         let pharmacyList = this.state.location.pharmacies.map((pharmacy) => {
             return (
                 <div key={pharmacy.id}>
-                    <Link to={`/pharmacy${pharmacy.id}`}>
+                    <Link to={`/pharmacies/${pharmacy.id}`}>
                         <div key={pharmacy.id}>
                             <p>{pharmacy.name}</p>
                             <img height="150" width="290" src={pharmacy.photo_url} alt=''/>
@@ -128,6 +128,9 @@ export default class Location extends Component {
             }
                 <h1>{this.state.location.name}</h1>
                 <h3>Doctors</h3>
+                <Link to={`/locations/${this.props.match.params.id}/doctors/new`}>
+                    Add Doctor
+                </Link>
                 {doctorList}
                 <h3>Pharmacies</h3>
                 {pharmacyList}
