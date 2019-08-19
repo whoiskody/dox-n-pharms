@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios';
+import { Redirect } from 'react-router-dom';
 
 export default class Doctor extends Component {
     state = {
@@ -23,11 +24,76 @@ export default class Doctor extends Component {
             })
     }
 
+    handleToggleEditForm = () => {
+        this.setState((state) => {
+            return {isEditFormDisplayed: !state.isEditFormDisplayed}
+        })
+    }
+
+    handleInputChange = (event) => {
+        const copiedDoctor = {...this.state.doctor}
+        copiedDoctor[event.target.name] = event.target.value
+        this.setState({doctor: copiedDoctor})
+    }
+
+    handleSubmit = (event) => {
+        event.preventDefault()
+
+        axios.put(`/api/v1/doctors/${this.state.doctor.id}/`, this.state.doctor)
+            .then((res) => {
+                this.setState({
+                    doctor: res.data,
+                    isEditFormDisplayed: false
+                })
+            })
+    }
+
+    handleDeleteDoctor = () => {
+        axios.delete(`/api/v1/doctors/${this.state.doctor.id}/`)
+        .then(() => {
+            this.setState({redirectToHome: true})
+        })
+    }
+
     render() {
+        if(this.state.redirectToHome) {
+            return <Redirect to="/" />
+        }
         return (
             <div>
+                {this.state.isEditFormDisplayed
+                ? <form onSubmit={this.handleSubmit}>
+                    <div className= "doctorName" >
+                        <label htmlFor="doctor-name">Name</label>
+                    <input 
+                            type='text' 
+                            name='name' 
+                            id='doctor-name'
+                            onChange={this.handleInputChange}
+                            value={this.state.doctor.name}
+                        />
+
+                        <label htmlFor='doctor-photo_url'>Photo URL</label>
+                        <input 
+                            type='text' 
+                            name='photo_url' 
+                            id='doctor-photo'
+                            onChange={this.handleInputChange}
+                            value={this.state.doctor.photo_url}
+                        />
+                    </div>
+                    <div className= "updateDoctor" >
+                       <input type="submit" value="Update Doctor"/> 
+                    </div>
+                    </form>
+            :<div>
+                 <button onClick={this.handleToggleEditForm}>Edit Doctor</button>
+                 <button onClick={this.handleDeleteDoctor}>Delete Doctor</button>
+                 </div>
+            }
                 <h1>{this.state.doctor.name}</h1>
                 <p>hello</p>
+            
             </div>
         )
     }

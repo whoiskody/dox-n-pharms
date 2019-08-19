@@ -122,8 +122,8 @@ export default class Location extends Component {
                     </div>
                     </form>
             :<div>
-                 <button onClick={this.handleToggleEditForm}>Edit Shop</button>
-                 <button onClick={this.handleDeleteLocation}>Delete Shop</button>
+                 <button onClick={this.handleToggleEditForm}>Edit City</button>
+                 <button onClick={this.handleDeleteLocation}>Delete City</button>
                  </div>
             }
                 <h1>{this.state.location.name}</h1>
@@ -133,6 +133,9 @@ export default class Location extends Component {
                 </Link>
                 {doctorList}
                 <h3>Pharmacies</h3>
+                <Link to={`/locations/${this.props.match.params.id}/pharmacies/new`}>
+                    Add Pharmacy
+                </Link>
                 {pharmacyList}
             </div>
         )
