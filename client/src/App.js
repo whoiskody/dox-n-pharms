@@ -15,10 +15,13 @@ class App extends Component {
         return (
               <Router>
           <div className="App">
-                  <nav>
+            <div className="nav">
+              <nav>
                     <h1>Dox-N-Pharms</h1>
                     <Link to="/">Home</Link>
                   </nav>
+            </div>
+                  
 
                     <Switch>
                       <Route exact path="/" component={LocationList}/>
