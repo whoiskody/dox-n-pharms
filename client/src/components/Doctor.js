@@ -12,7 +12,7 @@ export default class Doctor extends Component {
     }
 
     getDoctor = () => {
-        axios.get(`/api/v1/doctors/${this.props.match.params.id}`)
+        axios.get(`/api/v1/doctors/${this.props.match.params.id}/`)
             .then((res) => {
                 this.setState({
                     doctor: res.data,
@@ -27,6 +27,7 @@ export default class Doctor extends Component {
         return (
             <div>
                 <h1>{this.state.doctor.name}</h1>
+                <p>hello</p>
             </div>
         )
     }

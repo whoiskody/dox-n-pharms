@@ -25,7 +25,7 @@ class App extends Component {
                       <Route path="/locations/:id" component={Location}/>
                       <Route path="/new" component={NewLocationsForm}/>
                       <Route path="/doctors/:id" component={Doctor}/>
-                      <Route path="/pharmacy/:id" component={Pharmacy}/>
+                      <Route path="/pharmacies/:id" component={Pharmacy}/>
                     </Switch>
           </div>
               </Router>
