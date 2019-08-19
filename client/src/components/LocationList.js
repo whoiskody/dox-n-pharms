@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import './LocationList.css';
 
 export default class LocationList extends Component {
 
@@ -27,28 +28,35 @@ export default class LocationList extends Component {
     render() {
         let locationList = this.state.locations.map((location) => {
             return (
-                <div key={location.id}>
-                    <Link to={`/locations/${location.id}`}>
-                        <div>
-                            
-                            <h2>{location.name}</h2>
-                            <img height="125" width="290" src={location.photo_url} alt=''/>
-                            
+                
+                    <Link 
+                        key={location.id}
+                        to={`/locations/${location.id}`}
+                        className="location-card"
+                    >
+                        <div className="ui card">
+                            <div className="content">
+                                <h2>{location.name}</h2>
+                            </div>
+                            <div className="image">
+                                <img height="125" width="290" src={location.photo_url} alt=''/>
+                            </div>
                         </div>
                     </Link>
-                </div>
+                
             )
         })
 
         return (
             <div>
+                <h1>Locations</h1>
+                <p>*Choose Or Add Your City*</p>
                 <Link to={`/new`}>
                     Add City
                 </Link>
                 
                    {locationList} 
-                
-                
+
             </div>
         )
     }
