@@ -91,6 +91,11 @@ export default class Pharmacy extends Component {
                  <button onClick={this.handleDeletePharmacy}>Delete Pharmacy</button>
                  </div>
             }
+                 <div class="video-container">
+                    <iframe width="1278" height="350"
+                        src="https://www.youtube.com/embed/IW-LFyfuuhs?autoplay=1" allow='autoplay' frameborder="0">
+                    </iframe> 
+                </div>
                 <h1>{this.state.pharmacy.name}</h1>
                 <p>hello again</p>
             

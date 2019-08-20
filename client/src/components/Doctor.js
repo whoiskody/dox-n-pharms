@@ -91,6 +91,11 @@ export default class Doctor extends Component {
                  <button onClick={this.handleDeleteDoctor}>Delete Doctor</button>
                  </div>
             }
+                 <div class="video-container">
+                    <iframe width="1278" height="350"
+                        src="https://www.youtube.com/embed/HEjocL2b1yc?autoplay=1" allow='autoplay' frameborder="0">
+                    </iframe> 
+                </div>
                 <h1>{this.state.doctor.name}</h1>
                 <p>hello</p>
             
