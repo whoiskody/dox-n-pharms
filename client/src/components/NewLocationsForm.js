@@ -40,7 +40,11 @@ export default class NewLocationsForm extends Component {
 
         return (
             <div>
-                <h2>Add New Location</h2>
+                {/* <h2>Add New Location</h2> */}
+                <div className='img'>
+                    <img height="125" width="390" src ='https://i.imgur.com/t2ZF244.png'/>
+                </div>
+                
                 <form onSubmit={this.handleSubmit}>
                     <div className='form'>
                         <div className='field'>

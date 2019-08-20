@@ -7,8 +7,8 @@ p {
 
 .ui {
     border: solid 1px rgb(141, 139, 139);
-    border-radius: 0%;
-    width: 30%;
+    border-radius: 1%;
+    width: 87.4%;
     position: relative;
     left: 50px;
     background-color: white;
@@ -23,6 +23,7 @@ p {
     margin: 0%;
     font-size: 20px;
     color: black;
+    text-decoration: none;
 }
 
 .add a {
@@ -54,4 +55,30 @@ p {
 
 .video-container {
     border: 1px solid rgb(226, 225, 225);
+}
+
+.image {
+    width: 290px;
+    height: 125px;
+    border-radius: 1%;
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: center
+}
+
+.location-card {
+    position: relative;
+    right: 4%;
+}
+
+.img {
+    background-color: white;
+}
+
+p {
+    margin: 50px 0px 0px;
 }

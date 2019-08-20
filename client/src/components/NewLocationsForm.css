@@ -1,16 +1,18 @@
 .form {
-    border: 4px solid rgb(35, 175, 250);
+    border: 3px solid rgb(95, 199, 255);
     border-radius: 10px;
-    margin: 50px;
-    width: 25%;
-    height: 400px;
+    margin: 35px;
+    width: 22%;
+    height: 350px;
     background-color: white;
     position: relative;
-    left: 33%;
+    left: 36.2%;
 }
 
 .field {
     margin: 20px;
+    font-weight: bold;
+    /* text-align: left; */
 }
 
 .button input {
@@ -24,7 +26,7 @@
     width: 150px;
     height: 50px;
     font-size: 15px;
-    margin: 20px;
+    margin: 5px 0px 70px;
 }
 
 .button input:hover {
@@ -39,4 +41,21 @@
     height: 50px;
     transition: all 0.5s;
     /* margin: 5px; */
+}
+
+.field input {
+    padding: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border-radius: 2px;
+}
+
+input {
+    margin: 10px 0px 20px;
+}
+
+.img {
+    background-color: white;
 }

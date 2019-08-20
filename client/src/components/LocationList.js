@@ -55,7 +55,11 @@ export default class LocationList extends Component {
                     </iframe> 
                 </div>
                 
-                <h1>Locations</h1>
+                {/* <h1>Locations</h1> */}
+                <div className='img'>
+                    <img height="125" width="390" src='https://i.imgur.com/XYcrwxm.png'/>
+                </div>
+                
                 <p>*Choose Or Add Your City*</p>
                 <div className='add'>
                     <Link to={`/new`}>
