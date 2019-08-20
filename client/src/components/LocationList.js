@@ -59,7 +59,7 @@ export default class LocationList extends Component {
                 <p>*Choose Or Add Your City*</p>
                 <div className='add'>
                     <Link to={`/new`}>
-                    Add City
+                    Add City +
                 </Link>
                 </div>
                 

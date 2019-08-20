@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { Redirect } from 'react-router-dom';
+import './Location.css';
 
 export default class Location extends Component {
     state = {
@@ -121,7 +122,7 @@ export default class Location extends Component {
                        <input type="submit" value="Update Location"/> 
                     </div>
                     </form>
-            :<div>
+            :<div className='edit'>
                  <button onClick={this.handleToggleEditForm}>Edit City</button>
                  <button onClick={this.handleDeleteLocation}>Delete City</button>
                  </div>
@@ -133,14 +134,17 @@ export default class Location extends Component {
                 </div>
                 <h1>{this.state.location.name}</h1>
                 <h3>Doctors</h3>
-                <Link to={`/locations/${this.props.match.params.id}/doctors/new`}>
+                <div className='add'>
+                  <Link to={`/locations/${this.props.match.params.id}/doctors/new`}>
                     Add Doctor
                 </Link>
                 {doctorList}
                 <h3>Pharmacies</h3>
                 <Link to={`/locations/${this.props.match.params.id}/pharmacies/new`}>
                     Add Pharmacy
-                </Link>
+                </Link>  
+                </div>
+                
                 {pharmacyList}
             </div>
         )
