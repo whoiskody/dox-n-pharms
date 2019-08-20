@@ -126,6 +126,11 @@ export default class Location extends Component {
                  <button onClick={this.handleDeleteLocation}>Delete City</button>
                  </div>
             }
+                 <div class="video-container">
+                    <iframe width="1278" height="350"
+                        src="https://www.youtube.com/embed/gPVde5-CKFw?autoplay=1" allow='autoplay' frameborder="0">
+                    </iframe> 
+                </div>
                 <h1>{this.state.location.name}</h1>
                 <h3>Doctors</h3>
                 <Link to={`/locations/${this.props.match.params.id}/doctors/new`}>
@@ -141,3 +146,4 @@ export default class Location extends Component {
         )
     }
 }
+
