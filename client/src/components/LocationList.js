@@ -57,9 +57,11 @@ export default class LocationList extends Component {
                 
                 <h1>Locations</h1>
                 <p>*Choose Or Add Your City*</p>
-                <Link to={`/new`}>
+                <div className='add'>
+                    <Link to={`/new`}>
                     Add City
                 </Link>
+                </div>
                 
                    {locationList} 
 
