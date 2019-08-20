@@ -49,6 +49,12 @@ export default class LocationList extends Component {
 
         return (
             <div>
+                <div class="video-container">
+                    <iframe width="1278" height="350"
+                        src="https://www.youtube.com/embed/U3_uxUSeZV4?autoplay=1" allow='autoplay' frameborder="0">
+                    </iframe> 
+                </div>
+                
                 <h1>Locations</h1>
                 <p>*Choose Or Add Your City*</p>
                 <Link to={`/new`}>
