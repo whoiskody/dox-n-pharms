@@ -138,13 +138,15 @@ export default class Location extends Component {
                   <Link to={`/locations/${this.props.match.params.id}/doctors/new`}>
                     Add Doctor
                 </Link>
+                </div>
                 {doctorList}
                 <h3>Pharmacies</h3>
-                <Link to={`/locations/${this.props.match.params.id}/pharmacies/new`}>
+                <div className='add'>
+                   <Link to={`/locations/${this.props.match.params.id}/pharmacies/new`}>
                     Add Pharmacy
-                </Link>  
+                </Link>   
                 </div>
-                
+            
                 {pharmacyList}
             </div>
         )

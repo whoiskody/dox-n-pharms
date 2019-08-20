@@ -28,34 +28,3 @@
     transition: all 0.5s;
     margin: 5px;
 }
-
-.add {
-    margin: 40px 0px 55px;
-}
-
-.add a {
-    font-weight: bold;
-    text-decoration: none;
-    color: rgb(0, 166, 255);
-    border: 1px solid rgb(169, 169, 169);
-    border-radius: 4px;
-    background-color: white;
-    padding: 10px;
-    width: 150px;
-    height: 50px;
-    font-size: 15px;
-}
-
-.add a:hover {
-    border-radius: 4px;
-    background-color: rgb(0, 143, 252);
-    border: none;
-    color: #FFFFFF;
-    text-align: center;
-    font-size: 15px;
-    padding: 10px;
-    width: 150px;
-    height: 50px;
-    transition: all 0.5s;
-    margin: 20px;
-}

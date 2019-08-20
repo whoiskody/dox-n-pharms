@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios';
 import { Redirect } from 'react-router-dom';
+import './Doctor.css';
 
 export default class Doctor extends Component {
     state = {
@@ -86,7 +87,7 @@ export default class Doctor extends Component {
                        <input type="submit" value="Update Doctor"/> 
                     </div>
                     </form>
-            :<div>
+            :<div className='edit'>
                  <button onClick={this.handleToggleEditForm}>Edit Doctor</button>
                  <button onClick={this.handleDeleteDoctor}>Delete Doctor</button>
                  </div>

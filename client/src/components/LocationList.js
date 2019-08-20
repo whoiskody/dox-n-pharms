@@ -62,9 +62,10 @@ export default class LocationList extends Component {
                     Add City +
                 </Link>
                 </div>
-                
-                   {locationList} 
-
+                <div className="list">
+                    {locationList} 
+                </div>
+                   
             </div>
         )
     }

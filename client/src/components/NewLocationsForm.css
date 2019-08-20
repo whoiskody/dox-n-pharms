@@ -1,31 +1,19 @@
-p {
-    font-size: 15px;
+.form {
+    border: 4px solid rgb(35, 175, 250);
+    border-radius: 10px;
+    margin: 50px;
+    width: 25%;
+    height: 400px;
+    background-color: white;
     position: relative;
-    right: 0%;
-    top: -20px;
+    left: 33%;
 }
 
-.ui {
-    border: solid 1px rgb(141, 139, 139);
-    border-radius: 0%;
-    width: 30%;
-    position: relative;
-    left: 50px;
-    background-color: white;
-    justify-content: space-around;
+.field {
     margin: 20px;
 }
 
-.content h2 {
-    border-bottom: solid 1px gray;
-    position: relative;
-    padding: 10px 0px 10px 0px;
-    margin: 0%;
-    font-size: 20px;
-    color: black;
-}
-
-.add a {
+.button input {
     font-weight: bold;
     text-decoration: none;
     color: rgb(0, 166, 255);
@@ -36,9 +24,10 @@ p {
     width: 150px;
     height: 50px;
     font-size: 15px;
+    margin: 20px;
 }
 
-.add a:hover {
+.button input:hover {
     border-radius: 4px;
     background-color: rgb(0, 143, 252);
     border: none;
@@ -49,9 +38,5 @@ p {
     width: 150px;
     height: 50px;
     transition: all 0.5s;
-    margin: 20px;
-}
-
-.video-container {
-    border: 1px solid rgb(226, 225, 225);
+    /* margin: 5px; */
 }

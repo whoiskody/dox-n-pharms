@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios';
 import { Redirect } from 'react-router-dom';
+import './NewLocationsForm.css';
 
 export default class NewLocationsForm extends Component {
     state = {
@@ -41,17 +42,19 @@ export default class NewLocationsForm extends Component {
             <div>
                 <h2>Add New Location</h2>
                 <form onSubmit={this.handleSubmit}>
-                    <div>
-                        <label htmlFor='location-name'>City</label>
+                    <div className='form'>
+                        <div className='field'>
+                           <label htmlFor='location-name'>City</label>
                         <input 
                             type='text' 
                             name='name' 
                             id='location-name'
                             onChange={this.handleChange}
                             value={this.state.newLocation.name}
-                        />
-
-                        <label htmlFor='location-photo_url'>Photo URL</label>
+                        /> 
+                        </div>
+                        <div className='field'>
+                            <label htmlFor='location-photo_url'>Photo URL</label>
                         <input 
                             type='text' 
                             name='photo_url' 
@@ -59,8 +62,12 @@ export default class NewLocationsForm extends Component {
                             onChange={this.handleChange}
                             value={this.state.newLocation.photo_url}
                         />
+                        </div>
                     </div>
-                    <input type='submit' value='Create' />
+                    <div className="button">
+                        <input type='submit' value='Create' /> 
+                    </div>
+                   
                 </form>
             </div>
         )
