@@ -1,5 +1,6 @@
 # Project4: Dox-N-Pharms
-<p>   Need help finding a doctor or pharmacy in your city?</p>
+<p>   Need help finding a doctor or pharmacy in your city? Want to help others find doctors or pharmacies in your area? Dox-N-Pharms is a web app, made using Django and React, solely for that purpose.
+</p>
 
 # Link to Wireframes
 https://imgur.com/tVfZGot
