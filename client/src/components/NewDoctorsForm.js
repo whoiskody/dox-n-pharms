@@ -42,7 +42,10 @@ export default class NewDoctorsForm extends Component {
 
         return (
             <div>
-                <h2>Add New Doctor</h2>
+                <div className='img'>
+                    <img height="125" width="390" src ='https://i.imgur.com/eivtvT8.png'/>
+                </div>
+                
                 <form onSubmit={this.handleSubmit}>
                     <div className='form'>
                     <div className='field'>

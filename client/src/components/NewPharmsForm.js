@@ -42,7 +42,10 @@ export default class NewPharmsForm extends Component {
 
         return (
             <div>
-                <h2>Add New Pharmacy</h2>
+                <div className='img'>
+                    <img height="125" width="390" src ='https://i.imgur.com/p3i89oS.png'/>
+                </div>
+                
                 <form onSubmit={this.handleSubmit}>
                     <div className='form'>
                     <div className='field'>
