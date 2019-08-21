@@ -75,7 +75,7 @@ export default class Location extends Component {
                     <Link to={`/doctors/${doctor.id}`}>
                         <div key={doctor.id}>
                         <p>{doctor.name}</p>
-                        <img height="200" width="200" src={doctor.photo_url} alt=''/>
+                        <img height="200" width="200" src='https://previews.123rf.com/images/artemstepanov/artemstepanov1606/artemstepanov160600109/57845256-vector-female-face-avatar-logo-template-pictogram-button-round-trendy-flat-icon-with-women-for-busin.jpg' alt=''/>
                         </div>
                     </Link>
                 </div>
@@ -88,7 +88,7 @@ export default class Location extends Component {
                     <Link to={`/pharmacies/${pharmacy.id}`}>
                         <div key={pharmacy.id}>
                             <p>{pharmacy.name}</p>
-                            <img height="150" width="290" src={pharmacy.photo_url} alt=''/>
+                            <img height="150" width="290" src='https://previews.123rf.com/images/robuart/robuart1604/robuart160400008/54658146-skyscraper-logo-building-icon-black-building-and-isolated-skyscraper-tower-and-office-city-architect.jpg' alt=''/>
                         </div>
                     </Link>
                 </div>
@@ -139,15 +139,21 @@ export default class Location extends Component {
                     Add Doctor
                 </Link>
                 </div>
-                {doctorList}
+                
+                <div className='doclist'>
+                    {doctorList}
+                </div>
+                
                 <h3>Pharmacies</h3>
                 <div className='add'>
                    <Link to={`/locations/${this.props.match.params.id}/pharmacies/new`}>
                     Add Pharmacy
                 </Link>   
                 </div>
-            
-                {pharmacyList}
+                <div className='pharmlist'>
+                    {pharmacyList}
+                </div>
+                
             </div>
         )
     }

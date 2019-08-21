@@ -59,3 +59,21 @@
     transition: all 0.5s;
     margin: 20px;
 }
+
+.doclist {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: center
+}
+
+.pharmlist {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: center
+}
+
+p {
+    font-size: 40px;
+}

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios';
 import { Redirect } from 'react-router-dom';
+import './NewDoctorsForm.css';
 
 export default class NewDoctorsForm extends Component {
     state = {
@@ -43,7 +44,8 @@ export default class NewDoctorsForm extends Component {
             <div>
                 <h2>Add New Doctor</h2>
                 <form onSubmit={this.handleSubmit}>
-                    <div>
+                    <div className='form'>
+                    <div className='field'>
                         <label htmlFor='doctor-name'>Name</label>
                         <input 
                             type='text' 
@@ -53,16 +55,23 @@ export default class NewDoctorsForm extends Component {
                             value={this.state.newDoctor.name}
                         />
 
-                        <label htmlFor='doctor-contact'>Contact</label>
+                    </div>
+                        
+
+                        <div className='field'>
+                           <label htmlFor='doctor-contact'>Contact</label>
                         <input 
                             type='text' 
                             name='contact' 
                             id='doctor-contact'
                             onChange={this.handleChange}
                             value={this.state.newDoctor.contact}
-                        />
+                        /> 
+                        </div>
+                        
 
-                        <label htmlFor='doctor-address'>Address</label>
+                        <div className='field'>
+                            <label htmlFor='doctor-address'>Address</label>
                         <input 
                             type='text' 
                             name='address' 
@@ -70,9 +79,14 @@ export default class NewDoctorsForm extends Component {
                             onChange={this.handleChange}
                             value={this.state.newDoctor.address}
                         />
+                        </div>
+                        
 
                     </div>
-                    <input type='submit' value='Create' />
+                    <div className="button">
+                      <input type='submit' value='Create' />  
+                    </div>
+                    
                 </form>
             </div>
         )
