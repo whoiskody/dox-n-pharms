@@ -75,7 +75,12 @@ export default class Location extends Component {
                     <Link to={`/doctors/${doctor.id}`}>
                         <div key={doctor.id}>
                         <p>{doctor.name}</p>
-                        <img height="200" width="200" src='https://previews.123rf.com/images/artemstepanov/artemstepanov1606/artemstepanov160600109/57845256-vector-female-face-avatar-logo-template-pictogram-button-round-trendy-flat-icon-with-women-for-busin.jpg' alt=''/>
+                        <img 
+                            height="200" 
+                            width="200" 
+                            src='https://previews.123rf.com/images/artemstepanov/artemstepanov1606/artemstepanov160600109/57845256-vector-female-face-avatar-logo-template-pictogram-button-round-trendy-flat-icon-with-women-for-busin.jpg' 
+                            alt=''
+                            />
                         </div>
                     </Link>
                 </div>
