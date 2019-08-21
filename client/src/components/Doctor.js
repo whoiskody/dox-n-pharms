@@ -74,13 +74,22 @@ export default class Doctor extends Component {
                             value={this.state.doctor.name}
                         />
 
-                        <label htmlFor='doctor-photo_url'>Photo URL</label>
+                        <label htmlFor='doctor-contact'>Contact</label>
                         <input 
                             type='text' 
-                            name='photo_url' 
-                            id='doctor-photo'
+                            name='contact' 
+                            id='doctor-contact'
                             onChange={this.handleInputChange}
-                            value={this.state.doctor.photo_url}
+                            value={this.state.doctor.contact}
+                        />
+
+                        <label htmlFor='doctor-address'>Address</label>
+                        <input 
+                            type='text' 
+                            name='address' 
+                            id='doctor-address'
+                            onChange={this.handleInputChange}
+                            value={this.state.doctor.address}
                         />
                     </div>
                     <div className= "updateDoctor" >
@@ -98,7 +107,8 @@ export default class Doctor extends Component {
                     </iframe> 
                 </div>
                 <h1>{this.state.doctor.name}</h1>
-                <p>hello</p>
+                <p>{this.state.doctor.contact}</p>
+                <p>{this.state.doctor.address}</p>
             
             </div>
         )

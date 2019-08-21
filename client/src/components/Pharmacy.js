@@ -74,13 +74,22 @@ export default class Pharmacy extends Component {
                             value={this.state.pharmacy.name}
                         />
 
-                        <label htmlFor='pharmacy-photo_url'>Photo URL</label>
+                        <label htmlFor='pharmacy-contact'>Contact</label>
                         <input 
                             type='text' 
-                            name='photo_url' 
-                            id='pharmacy-photo'
+                            name='contact' 
+                            id='pharmacy-contact'
                             onChange={this.handleInputChange}
-                            value={this.state.pharmacy.photo_url}
+                            value={this.state.pharmacy.contact}
+                        />
+
+                        <label htmlFor='pharmacy-address'>Address</label>
+                        <input 
+                            type='text' 
+                            name='address' 
+                            id='pharmacy-address'
+                            onChange={this.handleInputChange}
+                            value={this.state.pharmacy.address}
                         />
                     </div>
                     <div className= "updatePharmacy" >
@@ -98,7 +107,8 @@ export default class Pharmacy extends Component {
                     </iframe> 
                 </div>
                 <h1>{this.state.pharmacy.name}</h1>
-                <p>hello again</p>
+                <p>{this.state.pharmacy.contact}</p>
+                <p>{this.state.pharmacy.address}</p>
             
             </div>
         )
